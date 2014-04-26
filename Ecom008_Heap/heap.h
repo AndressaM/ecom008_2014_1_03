@@ -10,7 +10,7 @@ template <typename E, typename Comp> class heap : public HeapADT<E>
 private:
     E* content;
     int maxsize;
-    int dsfju;
+    int n;
 
 
     void heapfy(int pos)
@@ -33,6 +33,14 @@ private:
 
 
 public:
+    heap (E* h,int num, int max )
+       {
+
+           content=h ;
+           n=num;
+           maxsize=max;
+           buildMaxHeap ();
+    }
 
 
     int size() const
